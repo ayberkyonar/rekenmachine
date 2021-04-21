@@ -35,6 +35,12 @@ function handleClick(event)
         case 'btn-clear':
             handleClear(element);
             break;
+        case 'btn-dot':
+            handleDot(element);
+            break;
+        case 'history':
+            handleHistory(element);
+            break;
     }
 }
 
@@ -53,7 +59,6 @@ function handleNumber(el)
 } 
 
 function handleOperator(el) {
-
     firstValue = display;
     display = "0";
     operator=el.innerHTML;
@@ -79,14 +84,26 @@ function handleEqual () {
 
 }
 
+function handleDot(el){
+    let dot = el.innerHTML;
+    if(!display.includes(".")){
+        display=display+dot;
+    }
+    showDisplay();
+}
+
 function handleClear (el) {
     display='0';
-    operator= 0;
+    operator=null;
     firstValue= 0;
     secondValue= 0;
     result= 0;
     displayElement.innerHTML = 0;
     showDisplay;
+}
+
+function handleHistory(el){
+    result;
 }
 
 function showDisplay(){
