@@ -56,9 +56,9 @@ function handleNumber(el)
 } 
 
 function handleOperator(el) {
+    operator=el.innerHTML;
     firstValue = display;
     display = "0";
-    operator=el.innerHTML;
     showDisplay();
 }
 
