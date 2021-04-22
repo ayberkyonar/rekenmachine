@@ -1,15 +1,28 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, Helvetica, sans-serif
   }
 
-.container {
+body{
+    background-color: rgb(240, 240, 240);
+}
+
+.container{
     max-width: 500px;
     margin: 10vh auto 0 auto;
     box-shadow: 0px 0px 43px 17px rgba(153,153,153,1);
 }
 
-.bg_dark {
-    background: #272727;
+.theme{
+    max-width: 500px;
+    margin: 3vh auto 0 auto;
+}
+
+.changeTheme{
+    font-size: 20px;
+}
+
+.themeDark {
+    background: #3d3d3d;
     color: rgb(255, 255, 255);
     }
     
@@ -33,12 +46,20 @@
     cursor: pointer;
 }
 
-.btn-number:hover,
 .btn-dot:hover,
 .btn-operator:hover,
-.btn-equal:hover,
-.btn-clear:hover
+.btn-equal:hover
  {
-    background: #34315a;
+    background: #48642f;
+    color: white;
+}
+
+.btn-clear:hover{
+    background: #912424;
+    color: white;
+}
+
+.btn-number:hover {
+    background: #3d387c;
     color: white;
 }

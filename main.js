@@ -1,8 +1,8 @@
 let headerButton = document.querySelector('body');
-let myButtons = document.querySelector('.themeToggle');
+let myButtons = document.querySelector('.changeTheme');
 
-function changeBackground(){
-    headerButton.classList.toggle ('bg_dark');
+function changeColor(){
+    headerButton.classList.toggle ('themeDark');
 }
 
 let display='0';
@@ -29,17 +29,14 @@ function handleClick(event)
         case 'btn-operator':
             handleOperator(element);
             break;
-        case 'btn-equal':
-            handleEqual(element);
+        case 'btn-dot':
+            handleDot(element);
             break;
         case 'btn-clear':
             handleClear(element);
             break;
-        case 'btn-dot':
-            handleDot(element);
-            break;
-        case 'history':
-            handleHistory(element);
+        case 'btn-equal':
+            handleEqual(element);
             break;
     }
 }
@@ -65,25 +62,6 @@ function handleOperator(el) {
     showDisplay();
 }
 
-function handleEqual () {
-    secondValue=display;
-    display = "0";
-    let one = parseFloat(firstValue);
-    let two = parseFloat(secondValue);
-    if (operator === "+") {
-        result = one+two;
-    }else if(operator === "-") {
-        result = one-two;
-    }else if(operator === "*") {
-        result = one*two;
-    }else if(operator === "/") {
-        result = one/two;
-    }
-    display=result;
-    showDisplay();
-
-}
-
 function handleDot(el){
     let dot = el.innerHTML;
     if(!display.includes(".")){
@@ -102,8 +80,22 @@ function handleClear (el) {
     showDisplay;
 }
 
-function handleHistory(el){
-    result;
+function handleEqual () {
+    secondValue=display;
+    display = "0";
+    let valueOne = parseFloat(firstValue);
+    let valueTwo = parseFloat(secondValue);
+    if (operator === "+") {
+        result = valueOne+valueTwo;
+    }else if(operator === "-") {
+        result = valueOne-valueTwo;
+    }else if(operator === "*") {
+        result = valueOne*valueTwo;
+    }else if(operator === "/") {
+        result = valueOne/valueTwo;
+    }
+    display=result;
+    showDisplay();
 }
 
 function showDisplay(){
